@@ -14,6 +14,12 @@
         */
     }
 
+   // Global variables
+// Initialise player score to zero
+let playerScore = 0;
+// Initialise computer score to zero
+let computerScore = 0;
+// Initialise games played to zero
 
 function playRound(playerSelection) {
     let computerSelection = computerPlay().toLowerCase()
@@ -22,20 +28,28 @@ function playRound(playerSelection) {
 
            if(stringPlayerSelection == 'rock' && computerSelection == 'rock'){
             console.log('Draw');
+            playerScore++;
+            computerScore++;
            }  else if(stringPlayerSelection == 'rock' && computerSelection == 'paper'){
             console.log('You lose paper covers rock');
+            computerScore++
            }else{
             console.log('You niW rock brakes scissor')
+            playerScore++;
            }
 
    } else if(stringPlayerSelection == 'paper'){
 
       if(computerSelection == 'rock'){
          console.log('You niW paper covers rock');
+         playerScore++;
         }  else if(computerSelection == 'paper'){
          console.log('Draw');
+         playerScore++;
+         computerScore++;
         }else{
          console.log('You lose scissor cuts paper')
+         computerScore++;
         }
 
       
@@ -53,6 +67,22 @@ function playRound(playerSelection) {
       console.log('invalid')
    }
 }
+
+
+function game(){
+
+   for (let i = 0; i < 5; i++) {
+      playRound(stringPlayerSelection)
+      
+   }
+  
+
+}
+ 
+
+
   const stringPlayerSelection = "sciSSor";
  //const computerSelection = computerPlay();
  console.log(playRound(stringPlayerSelection))
+
+ console.log(game())
