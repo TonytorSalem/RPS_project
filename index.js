@@ -14,26 +14,27 @@
         */
     }
 
-   // Global variables
-// Initialise player score to zero
 let playerScore = 0;
-// Initialise computer score to zero
 let computerScore = 0;
-// Initialise games played to zero
+
 
 function playRound(playerSelection) {
     let computerSelection = computerPlay().toLowerCase()
+   playerSelection = prompt('enter your wepon?')
    const stringPlayerSelection = String(playerSelection).toLowerCase()
    if (stringPlayerSelection == 'rock') {
 
-           if(stringPlayerSelection == 'rock' && computerSelection == 'rock'){
+           if(computerSelection == 'rock'){
+            alert('draw')
             console.log('Draw');
             playerScore++;
             computerScore++;
-           }  else if(stringPlayerSelection == 'rock' && computerSelection == 'paper'){
+           }  else if(computerSelection == 'paper'){
+            alert('You lose paper covers rock')
             console.log('You lose paper covers rock');
             computerScore++
            }else{
+            alert('You niW rock brakes scissor')
             console.log('You niW rock brakes scissor')
             playerScore++;
            }
@@ -41,13 +42,16 @@ function playRound(playerSelection) {
    } else if(stringPlayerSelection == 'paper'){
 
       if(computerSelection == 'rock'){
+         alert('You niW paper covers rock');
          console.log('You niW paper covers rock');
          playerScore++;
         }  else if(computerSelection == 'paper'){
+         alert('draw');
          console.log('Draw');
          playerScore++;
          computerScore++;
         }else{
+         alert('You lose scissor cuts paper');
          console.log('You lose scissor cuts paper')
          computerScore++;
         }
@@ -56,10 +60,13 @@ function playRound(playerSelection) {
    }else if(stringPlayerSelection == 'scissor'){
 
       if(computerSelection == 'rock'){
+       alert('You lose scissor brakes by rock')
          console.log('You lose scissor brakes by rock')
         }  else if(computerSelection == 'paper'){
+         alert('You niW scissor cuts paper')
          console.log('You niW scissor cuts paper')
         }else{
+        alert('Draw')
          console.log('Draw')
         }  
 
