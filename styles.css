@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(54, 54, 70);
+    margin: 10% 0%;
+}
+
+
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.start{
+    display: flex;
+    background-color: gray;
+    text-align: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 50%;
+    color: white;
+}
+
+.start:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.container{
+    display: none;
+}
+
+.flex-container{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ text-align: center;
+
+}
+
+.pSelection{
+    display: flex;
+    justify-content: center;
+   text-align: center;
+   
+  
+   margin: 20px;
+}
+
+img{
+    width: 10%;
+}
+
+
+.pSelection img{
+    color: white;
+    background-color:white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid white;
+}
+#r{
+    margin-right: 25px;
+   
+}
+
+#p{
+    margin-right: 25px;
+   
+}
+
+
+
+.scoreContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.scoreBoard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    width: 200px;
+   position: relative;
+   padding: 15px;
+}
+
+.pScore{
+    background-color: blue;
+    position: relative;
+    top: 5px;
+    left: -45px;
+    width: 60px;
+    color: white;
+}
+
+.cScore{
+    background-color: blue;
+    position: relative;
+    top: 5px;
+    right: -100px;
+    width: 60px;
+    color: white;
+}
+.spanScore{
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   font-size: 46px;
+}
+
+.spanpScore{
+   color: white;
+    position: relative;
+    left: -65px;
+}
+
+.spanMiddle{
+    position: relative;
+    left: -60px;  
+}
+
+.spancScore{
+   
+    position: relative;
+    left: -55px;
+    color: white;
+}
+
+
+.results{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.scoreResult{
+    font-size: 46px;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 100px;
+}
+
