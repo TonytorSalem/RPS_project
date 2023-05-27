@@ -26,25 +26,8 @@ body{
     font-size: 2rem;
     border-radius: 10px;
     width: 200px;
-    margin-top: 50%;
+    margin-top: 20%;
     color: white;
-}
-.try{
-    display: none;
-    background-color: gray;
-    text-align: center;
-    justify-content: center;
-    font-size: 2rem;
-    border-radius: 10px;
-    width: 200px;
-    margin-top: 50%;
-    color: white;
-}
-
-
-.try:hover{
-    background-color: green;
-    cursor: pointer;
 }
 
 .start:hover{

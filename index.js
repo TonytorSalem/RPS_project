@@ -27,7 +27,7 @@ start.addEventListener('click', function (){
    container.style.display = 'block'
    startrm.style.display = 'none'
    p.style.display = 'none'
-   playRound(playerSelection)
+   
 })
 
 
@@ -47,9 +47,6 @@ start.addEventListener('click', function (){
         p.textContent = "DRAW"
         p.style.font = '40px'
         p.classList.add('scoreResult')
-       spanpScore.innerHTML = 0
-       spancScore.innerHTML = 0
-       results.textContent = 'rock beats scissors'
         start.style.display = "block"
       }else if(playerScore<computerScore){
         container.style.display = 'none'
