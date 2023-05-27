@@ -14,6 +14,7 @@ const main = document.querySelector('.main')
 const p = document.querySelector('p')
 const rmp = document.querySelector('p')
 const t = document.querySelector('.try')
+const rmt = document.querySelector('.try')
 
 
 const arr = ['r','p','s'];
@@ -26,15 +27,7 @@ start.addEventListener('click', function (){
    container.style.display = 'block'
    startrm.style.display = 'none'
    p.style.display = 'none'
-})
-
-t.addEventListener('click', function (){
-   container.style.display = 'block'
-   playerScore = 0
-   computerScore = 0
-   results.innerHTML = ""
-   startrm.style.display = 'none'
-   
+   playRound(playerSelection)
 })
 
 
@@ -51,11 +44,13 @@ t.addEventListener('click', function (){
         container.style.display = 'none'
         startrm.style.display = 'none'
         rmp.style.display = 'block'
-        p.textContent = "YOU WIN"
+        p.textContent = "DRAW"
         p.style.font = '40px'
         p.classList.add('scoreResult')
-        t.style.display = "block"
-        start.style.display = "none"
+       spanpScore.innerHTML = 0
+       spancScore.innerHTML = 0
+       results.textContent = 'rock beats scissors'
+        start.style.display = "block"
       }else if(playerScore<computerScore){
         container.style.display = 'none'
         startrm.style.display = 'none'
@@ -63,17 +58,21 @@ t.addEventListener('click', function (){
         p.textContent = "YOU LOST"
         p.style.font = '40px'
         p.classList.add('scoreResult')
-        t.style.display = "block"
-        start.style.display = "none"
+        p.textContent = "DRAW"
+        p.style.font = '40px'
+        p.classList.add('scoreResult')
+        start.style.display = "block"
       }else{
          container.style.display = 'none'
         startrm.style.display = 'none'
         rmp.style.display = 'block'
+        p.textContent = "YOU WIN"
+        p.style.font = '40px'
+        p.classList.add('scoreResult')
         p.textContent = "DRAW"
         p.style.font = '40px'
         p.classList.add('scoreResult')
-        t.style.display = "block"
-        start.style.display = "none"
+        start.style.display = "block"
       }
    }
  }
@@ -129,21 +128,31 @@ function playRound(playerSelection) {
 
       }
 
+
+     /*
+      t.addEventListener('click', function (){
+         container.style.display = 'block'
+         spanpScore.innerHTML = 0
+         spancScore.innerHTML = 0
+         results.innerHTML = "rock beats scissors"
+         startrm.style.display = 'none'
+         rmt.style.display = 'none'
+         playRound(playerSelection)
+      })*/ 
+
+
    rock.addEventListener('click', ()=>{
-      rock.style.backgroundColor = "red"
-      rock.style.font = "1rem"
+      
       playRound('r')
    })  
 
    paper.addEventListener('click', ()=>{
-      paper.style.backgroundColor = "gray"
-      paper.style.font = "1rem"
+     
       playRound('p')
    })  
 
    scissors.addEventListener('click', ()=>{
-      scissors.style.backgroundColor = "gray"
-      scissors.style.font = "1rem"
+     
       playRound('s')
    })  
 
