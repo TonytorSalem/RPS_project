@@ -29,22 +29,35 @@ body{
     margin-top: 50%;
     color: white;
 }
+.try{
+    display: none;
+    background-color: gray;
+    text-align: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 50%;
+    color: white;
+}
+
+
+.try:hover{
+    background-color: green;
+    cursor: pointer;
+}
 
 .start:hover{
     background-color: green;
     cursor: pointer;
 }
 
-.main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+
 .main{
     display: flex;
     text-align: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .container{

@@ -1,6 +1,6 @@
 
-playerScore = 0
-computerScore = 0
+let playerScore = 0
+let computerScore = 0
 const start = document.querySelector('.start')
 const startrm = document.querySelector('.start')
 const container = document.querySelector('.container')
@@ -13,6 +13,7 @@ const results = document.querySelector('.results')
 const main = document.querySelector('.main')
 const p = document.querySelector('p')
 const rmp = document.querySelector('p')
+const t = document.querySelector('.try')
 
 
 const arr = ['r','p','s'];
@@ -27,6 +28,15 @@ start.addEventListener('click', function (){
    p.style.display = 'none'
 })
 
+t.addEventListener('click', function (){
+   container.style.display = 'block'
+   playerScore = 0
+   computerScore = 0
+   results.innerHTML = ""
+   startrm.style.display = 'none'
+   
+})
+
 
  function convertTOwords(letter){
    if(letter === 'r')return 'rock'
@@ -39,29 +49,31 @@ start.addEventListener('click', function (){
    if(playerScore === 5 || computerScore === 5){
       if(playerScore === computerScore){
         container.style.display = 'none'
-        startrm.style.display = 'block'
+        startrm.style.display = 'none'
         rmp.style.display = 'block'
         p.textContent = "YOU WIN"
         p.style.font = '40px'
         p.classList.add('scoreResult')
-        startrm.style.textContent = "try again"
+        t.style.display = "block"
+        start.style.display = "none"
       }else if(playerScore<computerScore){
-         container.style.display = 'none'
-        startrm.style.display = 'block'
-
+        container.style.display = 'none'
+        startrm.style.display = 'none'
         p.style.display = 'block'
         p.textContent = "YOU LOST"
         p.style.font = '40px'
         p.classList.add('scoreResult')
-        startrm.style.textContent = "try again"
+        t.style.display = "block"
+        start.style.display = "none"
       }else{
          container.style.display = 'none'
-        startrm.style.display = 'block'
+        startrm.style.display = 'none'
         rmp.style.display = 'block'
         p.textContent = "DRAW"
         p.style.font = '40px'
         p.classList.add('scoreResult')
-        startrm.style.textContent = "try again"
+        t.style.display = "block"
+        start.style.display = "none"
       }
    }
  }
