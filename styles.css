@@ -26,13 +26,22 @@ body{
     font-size: 2rem;
     border-radius: 10px;
     width: 200px;
-    margin-top: 20%;
+    margin-left: 200px;
+    margin-bottom: 200px;
     color: white;
 }
 
 .start:hover{
     background-color: green;
     cursor: pointer;
+}
+
+.pb{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: 1px solid black;
 }
 
 
