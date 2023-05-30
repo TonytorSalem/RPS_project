@@ -2,8 +2,11 @@
 let playerScore = 0
 let computerScore = 0
 const start = document.querySelector('.start')
+const Try = document.querySelector('.try')
+const rmvTry = document.querySelector('.try')
 const startrm = document.querySelector('.start')
 const container = document.querySelector('.container')
+const score = document.querySelector('.score')
 const spanpScore = document.querySelector('.spanpScore')
 const spancScore = document.querySelector('.spancScore')
 const rock = document.getElementById('r')
@@ -23,11 +26,25 @@ function computerPlay(){
   return arr[(Math.floor(Math.random()*arr.length))]
  }
 
+
+
+
 start.addEventListener('click', function (){
    container.style.display = 'block'
    startrm.style.display = 'none'
    p.style.display = 'none'
+  
    
+})
+
+Try.addEventListener('click', function (){
+  container.style.display = 'block'
+  spanpScore.textContent = 0
+  spancScore.textContent = 0
+  rmvTry.style.display = 'none'
+  p.style.display = 'none'
+ 
+  
 })
 
 
@@ -40,36 +57,31 @@ start.addEventListener('click', function (){
 
  function checkResult(playerScore,computerScore){
    if(playerScore === 5 || computerScore === 5){
-      if(playerScore === computerScore){
-        container.style.display = 'none'
-        startrm.style.display = 'none'
-        rmp.style.display = 'block'
-        p.textContent = "DRAW"
-        p.style.font = '40px'
-        p.classList.add('scoreResult')
-        start.style.display = "block"
-      }else if(playerScore<computerScore){
+      
+      if(playerScore<computerScore){
         container.style.display = 'none'
         startrm.style.display = 'none'
         p.style.display = 'block'
         p.textContent = "YOU LOST"
         p.style.font = '40px'
         p.classList.add('scoreResult')
-        p.textContent = "DRAW"
         p.style.font = '40px'
         p.classList.add('scoreResult')
-        start.style.display = "block"
+        start.style.display = "none"
+        Try.style.display = "block"
+        
       }else{
          container.style.display = 'none'
         startrm.style.display = 'none'
         rmp.style.display = 'block'
         p.textContent = "YOU WIN"
         p.style.font = '40px'
-        p.classList.add('scoreResult')
-        p.textContent = "DRAW"
+        p.classList.add('scoreResult')    
         p.style.font = '40px'
         p.classList.add('scoreResult')
-        start.style.display = "block"
+        start.style.display = "none"
+        Try.style.display = "block"
+       
       }
    }
  }
